@@ -5,6 +5,7 @@
 *.pt
 *.pth
 *.swp
+exp/
 
 __pycache__/
 *.py[cod]
