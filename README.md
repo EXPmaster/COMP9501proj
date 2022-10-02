@@ -22,6 +22,8 @@ I have also found that `tensorboard` wants `protobuf` version to be `3.20.x`, an
 pip3 install --upgrade protobuf==3.20.0 
 ```
 
+This project requires MuJoCo package, refer to [MuJoCo](https://github.com/openai/mujoco-py/blob/master/README.md) for installation.
+
 
 ## Example
 To train an ODT agent for `hopper` with the `medium-v2` dataset:

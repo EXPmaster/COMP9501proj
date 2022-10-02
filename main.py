@@ -261,6 +261,7 @@ class Experiment:
                 state_std=self.state_std,
                 reward_scale=self.reward_scale,
                 action_range=self.action_range,
+                num_workers=self.variant["num_workers"],
             )
 
             train_outputs = trainer.train_iteration(
@@ -345,6 +346,7 @@ class Experiment:
                 state_std=self.state_std,
                 reward_scale=self.reward_scale,
                 action_range=self.action_range,
+                num_workers=self.variant["num_workers"],
             )
 
             # finetuning
@@ -476,6 +478,7 @@ if __name__ == "__main__":
     parser.add_argument("--activation_function", type=str, default="relu")
     parser.add_argument("--dropout", type=float, default=0.1)
     parser.add_argument("--eval_context_length", type=int, default=5)
+    parser.add_argument("--num_workers", type=int, default=4)
     # 0: no pos embedding others: absolute ordering
     parser.add_argument("--ordering", type=int, default=0)
 
